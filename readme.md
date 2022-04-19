@@ -1,4 +1,4 @@
-# Typescript Server Template
+# Typescript Eslint Prettier Server Template
 
 To setup your .env files
 1. For development mode
