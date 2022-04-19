@@ -32,6 +32,9 @@ Run the server without watching changes with
 
 `yarn start`
 
+
+PS: <b>It comes with husky</b> Happy coding!
+
 ## Using the template
 
 You can base a new Github repo on this template with the Github cli:

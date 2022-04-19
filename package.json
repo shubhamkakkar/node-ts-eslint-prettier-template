@@ -5,7 +5,7 @@
   "license": "Public",
   "author": {
     "name": "Shubham kakkar",
-    "email": "shubham.kakkar98@gmail.com",
+    "email": "shubham.kakkar98@gmail.com"
   },
   "scripts": {
     "env:dev": "cp .env.dev .env echo '\nCURRENT_ENV=Development'  >> .env",
