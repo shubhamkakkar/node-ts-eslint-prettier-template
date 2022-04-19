@@ -31,7 +31,7 @@
     "typescript": "^4.6.3"
   },
   "lint-staged": {
-    "src/**/*.ts": [
+    "**/*.ts": [
       "yarn eslint:fix"
     ]
   },
