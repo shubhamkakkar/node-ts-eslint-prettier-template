@@ -9,7 +9,8 @@
     "env:production": "cp .env.prod .env echo '\nCURRENT_ENV=Production'  >> .env",
     "back:build": "tsc",
     "back:dev": "yarn env:dev && yarn back:build && nodemon ./dist/server.js",
-    "start": "yarn back:build && node ./dist/server.js"
+    "start": "yarn back:build && node ./dist/server.js",
+    "eslint:fix": "eslint --fix"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
@@ -19,6 +20,11 @@
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.25",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "typescript": "^4.6.3"
   }
