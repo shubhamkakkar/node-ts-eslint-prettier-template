@@ -2,13 +2,18 @@
   "name": "node-typescript-eslint-prettier-template",
   "version": "1.0.0",
   "main": "./dist/index.js",
-  "license": "MIT",
+  "license": "Public",
+  "author": {
+    "name": "Shubham kakkar",
+    "email": "shubham.kakkar98@gmail.com",
+  },
   "scripts": {
     "env:dev": "cp .env.dev .env echo '\nCURRENT_ENV=Development'  >> .env",
     "env:staging": "cp .env.staging .env echo '\nCURRENT_ENV=Staging'  >> .env",
     "env:production": "cp .env.prod .env echo '\nCURRENT_ENV=Production'  >> .env",
     "back:build": "tsc",
-    "back:dev": "yarn env:dev && yarn back:build && nodemon ./dist/server.js",
+    "back:base": "yarn back:build && nodemon ./dist/server.js",
+    "back:dev": "yarn env:dev && yarn back:base",
     "start": "yarn back:build && node ./dist/server.js",
     "eslint:fix": "eslint --fix"
   },
