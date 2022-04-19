@@ -4,14 +4,19 @@
   "main": "./dist/index.js",
   "license": "MIT",
   "scripts": {
+    "env:dev": "cp .env.dev .env echo '\nCURRENT_ENV=Development'  >> .env",
+    "env:staging": "cp .env.staging .env echo '\nCURRENT_ENV=Staging'  >> .env",
+    "env:production": "cp .env.prod .env echo '\nCURRENT_ENV=Production'  >> .env",
     "back:build": "tsc",
-    "back:dev": "yarn back:build && nodemon ./dist/server.js",
+    "back:dev": "yarn env:dev && yarn back:build && nodemon ./dist/server.js",
     "start": "yarn back:build && node ./dist/server.js"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.25",
     "nodemon": "^2.0.15",
